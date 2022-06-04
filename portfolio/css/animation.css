@@ -1,0 +1,53 @@
+@charset 'utf-8';
+
+@keyframes astronaut {
+    0% {transform: translateY(0) rotate(0deg);}
+    50% {transform: translateY(50%) rotate(360deg);}
+    75% {transform: translateY(-50%) rotate(180deg);}
+    100% {transform: translateY(0) rotate(0);}
+}
+
+@keyframes spaceship {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-1500%);}
+    50% {transform: translateY(0);}
+}
+
+@keyframes outerc1 {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+@keyframes outerc2 {
+    0% {transform: translate(-50%, -50%) rotate(45deg);}
+    100% {transform: translate(-50%, -50%) rotate(405deg);}
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadein-up {
+    0% {opacity: 0; transform: translateY(10%);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+.ani {opacity: 0;}
+.copy-wrap.show span {
+    transform: translate(0);
+    transition: 1.2s;
+}
+.subject.show {opacity: 1; transform: translateY(0); transition: 1.2s;}
+.pf-img.show {animation: fadein 0.8s 0.2s linear both;}
+.pf-desc.show {animation: fadein-up 1.2s 0.4s both;}
+.self-port.show {animation: fadein 0.8s 0.4s ease-in both;}
+.intro-desc.show {animation: fadein-up 1s 0.6s both;}
+.skill li.show {transition-delay: 0.5s; opacity: 1;}
+.my-info ul li.show {transition-duration: 1s; transition-delay: 0.5s; opacity: 1;}
+.mail-form.show {animation: fadein-up 1s 0.5s both;}
+@media screen and (max-width: 767px) {}
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) and (max-width:1023px) {}
+@media screen and (min-width: 1024px) {
+    .skill li.show {transition-delay: 1s; opacity: 1;}
+    .mail-form.show {animation: fadein-up 1s 1s both;}
+}

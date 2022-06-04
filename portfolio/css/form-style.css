@@ -1,0 +1,99 @@
+/* 회원가입 약관 */
+#contactForm input, textarea { font-family: 'pretendard', serif; font-size: 1.2rem; }
+.container {display: none;}
+#contactForm {}
+#contactForm>div {width: 100%; font-size: 0.9rem;}
+#contactForm_form {}
+#contactForm_term {}
+#contactForm_term h2 {border-bottom: 2px solid #369; padding: 0.5rem;}
+#contactForm_term h3 {color: #369; margin: 0.3rem 0;}
+#contactForm_term dl {}
+#contactForm_term dl dt {font-weight: bold;}
+#contactForm_term dl dt:before {display: inline-block; content: '-'; margin-right: 0.2rem;}
+#contactForm_term dl dd {margin-left: 3rem;}
+#contactForm .contactForm_agree2 {border: 0; font-size: 1.2rem; font-weight: bold; background-color: #369; color: #fff; border-radius: 5px; padding: 0.8rem ; text-align: center; margin: 0.8rem 0;}
+.tbl_frm01 {text-align: center;}
+.tbl_frm01 li {margin-bottom: 20px;}
+.tbl_frm01 li, .btn_confirm {position: relative; z-index: 1;}
+.tbl_frm01 li:after, .btn_confirm:after {position: absolute; content: ''; display: block; left: 5px; top: 5px; width: 100%; height: 100%; border: 2px solid #fff; z-index: -1;}
+.tbl_frm01 label {display: block; width: 20%; font-weight: bold; color: #369; line-height: 1.6rem;}
+.tbl_frm01 input {position: relative; border: 2px solid #fff; padding: 0.5rem; width: 100%; color: #fff; background: #000;}
+.tbl_frm01 input:focus, .tbl_frm01 textarea:focus {outline: none; right: -7px; top: 7px;}
+.tbl_frm01 textarea {position: relative; border: 2px solid #fff; padding: 0.5rem; width: 100%; color: #fff; background: #000; height: 250px;} 
+.btn_confirm .btn_submit {border: 2px solid #fff; background-color: #fff; color: #000; height:50px; padding:0 40px; cursor: pointer;}
+.btn_confirm {}
+.btn_confirm:active {}
+#contactForm {}
+#contactForm .agree_text {display:block; padding:20px; width:100%; line-height:1.6rem}
+
+
+/* alert Bootstrap */
+#alertOk, #alertErr { display:none; }
+.alert {
+  position: absolute;
+  top: 50%;
+  padding: 15px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+.alert-success hr {
+  border-top-color: #c9e2b3;
+}
+.alert-success .alert-link {
+  color: #2b542c;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert-danger hr {
+  border-top-color: #e4b9c0;
+}
+.alert-danger .alert-link {
+  color: #843534;
+}
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+       -o-transition: opacity .15s linear;
+          transition: opacity .15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+
+.close {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 2px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+button.close {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}

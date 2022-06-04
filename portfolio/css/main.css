@@ -1,0 +1,136 @@
+@charset 'utf-8';
+
+/*  */
+#y-con {padding-top: 60px; word-break: keep-all;}
+.astro {
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 50%;
+    width: 90px;
+    opacity: 0;
+    animation: astronaut 100s linear infinite both;
+    transition: all 5s;
+    z-index: 1;
+}
+.main-container {
+    width: 100%;
+    height: 100vh;
+    background: url('../images/main_bg.jpg') no-repeat;
+    background-position: top center;
+}
+.main-wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.main-copy {
+    font-size: 11vw;
+}
+.main-copy span {display: inline-block; overflow: hidden;}
+.copy-wrap {line-height: 0; margin-top: -20px;}
+.copy-wrap span {
+    line-height: 1.3;
+    transform: translateY(120%);
+}
+/* 포트폴리오 영역 */
+.portfolio-container {position: relative; overflow: hidden; padding-bottom: 400px; background: url('../images/pf_bg1.jpg') top center no-repeat;}
+.pf-wrap {position: relative; background-color: rgba(0,0,0,0.5); z-index: 2;}
+.subject-wrap {overflow: hidden;}
+.subject {font-size: 3rem; transform: translateY(120%);}
+.pf-list {}
+.pf-list ol {}
+.pf-list ol li {padding-top: 100px; display: flex; flex-direction: column;}
+.pf-list ol li:nth-of-type(odd) {}
+.pf-list ol li:nth-of-type(even) {}
+.pf-img {position: relative; display: block; max-width: 700px; overflow: hidden; transition-delay: 0.5s;}
+.drawborder {position: absolute; display: block; background: #fff; transition: 0.2s; transition-timing-function: linear;}
+.drawborder-top, .drawborder-bottom {width: 0; height: 10px;}
+.drawborder-right, .drawborder-left {width: 10px; height: 0;}
+.drawborder-top {top: 0;}
+.drawborder-right {top: 0; right: 0; }
+.drawborder-bottom {bottom: 0; right: 0;  transform-origin: left;}
+.drawborder-left {left: 0; bottom: 0; }
+.pf-img img {width: 100%;}
+.pf-desc {width: 100%; font-weight: 200; padding: 20px;}
+.pf-desc h4 {font-size: 2rem;}
+.pf-contents {padding: 20px 0;}
+.page-btn-wrap {position: static;}
+.page-btn {display: inline-block; position: relative; width: 150px; margin: 0 10px 10px 0; border: 1px solid #fff; line-height: 42px; padding-left: 18px;}
+.page-btn:before, .page-btn:after {content: ''; display: block; position: absolute; top: 0; right: 0; width: 42px; height: 42px;}
+.page-btn:before {background: #fff;}
+.page-btn:after {background: url('../images/arrow.svg') center no-repeat; background-size: 25px; transition: all 0.3s;}
+.page-btn:hover:after {transform: rotate(45deg);}
+/* 원 배경 */
+.bg-circle {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    bottom: -300px;
+    transform: translate(-50%);
+}
+.circle-line {border: 1px solid #fff; border-radius: 100%;}
+.outer-c1 {display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; animation: outerc1 20s linear both infinite;}
+.outer-c2 {display: flex; position: absolute; align-items: center; justify-content: center; width: 70%; height: 70%; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); animation: outerc2 10s linear both infinite;}
+.outer-c3 {position: absolute; width: 50%; height: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.inner {position: absolute;}
+.c1 {width: 50px; height: 50px; top: -25px;}
+.c2 {width: 50px; height: 50px; bottom: -25px; background: #fff;}
+.c3 {width: 30px; height: 30px; top: -15px; background: #fff;}
+.c4 {width: 30px; height: 30px; bottom: -15px;}
+.center-c {width: 160px; height: 160px; background: #fff; box-shadow: #fff 0 0 20px;}
+/* 자기소개 영역 */
+.about-container {position: relative; overflow: hidden; padding-top: 100px; z-index: 2;}
+.marquee-swiper {position: relative; opacity: 0.3;}
+.marquee-swiper .swiper-wrapper {transition-timing-function: linear;}
+.marquee-swiper .swiper-slide {width: auto; letter-spacing: -3px;}
+.marquee {font-size: 3rem;}
+.about-wrap {background-color: rgba(0,0,0,0.5);}
+.intro-wrap {display: flex; flex-direction: column; padding: 100px 0;}
+.intro {}
+.intro-desc {}
+.intro-desc h4 {font-size: 1.5rem;}
+.self-port {display: block; max-width: 400px; margin: auto;}
+.skill {padding-top: 100px;}
+.skill li {padding-bottom: 40px; overflow: hidden; transition: 1s;}
+.skill li:last-of-type {padding-bottom: 0;}
+.skill-name {font-size: 2.3rem;}
+.skill-desc {display: block;}
+
+@media screen and (max-width: 767px) {
+}
+@media screen and (min-width: 768px) {
+    .main-container {
+        background-position: 90%;
+    }
+    .main-copy {
+        padding-left: 40px;
+        font-size: 5vw;
+    }
+    .pf-wrap {padding: 0 40px;}
+    .pf-desc {height: 466px; padding: 40px;}
+    .intro span {display: block;}
+}
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    .about-wrap {padding: 0 40px 100px;}
+}
+@media screen and (min-width: 1024px) {
+    .astro {display: block;}
+    .intro-wrap {flex-direction: row; justify-content: space-around; align-items: flex-end;}
+}
+@media screen and (min-width: 1024px) and (max-width:1279px) {
+    .pf-img img {width: auto;}
+}
+@media screen and (min-width: 1280px) {
+    .main-copy {
+        font-size: 4rem;
+        padding-left: 40px;
+    }
+    .pf-list ol li {flex-direction: row;}
+    .pf-list ol li:nth-of-type(even) {flex-direction: row-reverse;}
+    .page-btn-wrap {position: absolute; bottom: 40px;}
+    .page-btn {margin: 0 10px 0 0;}
+    .pf-desc {width: calc(100% - 700px);}
+    .skill {padding-top: 0;}
+}
